@@ -4,8 +4,12 @@ import styled from 'styled-components/native';
 
 import { Container } from "../components/shared"
 import { Colors } from "../components/colors"
-//custom components
+import LargeText from "../components/Texts/LargeText"
+import RegularText from "../components/Texts/RegularText"
+import SmallText from "../components/Texts/SmallText"
+import RegularButton from "../components/Buttons/RegularButton"
 
+//custom components
 const WelcomeContainer = styled(Container)`
 background-color: ${Colors.secondary};
 justify-content: space-between;
@@ -18,7 +22,7 @@ flex: 1;
 max-height: 55%;
 `;
 
-const topImage = styled.Image`
+const TopImage = styled.Image`
 width: 100%;
 height: 100%;
 resize-mode: stretch;
@@ -30,13 +34,28 @@ padding: 25px;
 flex: 1;
 `;
 
+//image
+import background from "../assets/bgs/background_v1.png"
+
 const Welcome:FunctionComponent = () => {
     return(
         <>
             <StatusBar style="light"/>
             <WelcomeContainer>
-                <TopSection></TopSection>
-                <BottomSection></BottomSection>
+                <TopSection>
+                    <TopImage source={background} />
+                </TopSection>
+                <BottomSection>
+                    <LargeText textStyles={{width: "70px", marginBottom: 25}}>
+                        Best way to track your money
+                    </LargeText>
+                    <SmallText textStyles={{width: "70px", marginBottom: 25}}>
+                        Best payment method, connects your money to your friends and family.
+                    </SmallText >
+                    <RegularButton onPress={() => {}}>
+                        Get Started
+                    </RegularButton>
+                </BottomSection>
             </WelcomeContainer>
         </>
     );
