@@ -24,8 +24,7 @@ interface ButtonProps {
     btnStyles?: StyleProp<ViewStyle>;
     onPress: ((event: GestureResponderEvent) => void) | undefined;
     textStyles?: StyleProp<TextStyle>;
-    children: React.ReactNode;
-    
+    children: React.ReactNode;   
 }
 
 const RegularButton: FunctionComponent<ButtonProps> = (props) => {

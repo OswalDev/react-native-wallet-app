@@ -32,6 +32,7 @@ const BottomSection = styled.View`
 width: 100%;
 padding: 25px;
 flex: 1;
+justify-content: flex-end;
 `;
 
 //image
@@ -46,10 +47,10 @@ const Welcome:FunctionComponent = () => {
                     <TopImage source={background} />
                 </TopSection>
                 <BottomSection>
-                    <LargeText textStyles={{width: "70px", marginBottom: 25}}>
+                    <LargeText textStyles={{ width: "70%", marginBottom: 25 }}>
                         Best way to track your money
                     </LargeText>
-                    <SmallText textStyles={{width: "70px", marginBottom: 25}}>
+                    <SmallText textStyles={{ width: "70%", marginBottom: 25 }}>
                         Best payment method, connects your money to your friends and family.
                     </SmallText >
                     <RegularButton onPress={() => {}}>
