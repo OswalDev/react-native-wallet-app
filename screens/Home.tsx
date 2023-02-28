@@ -83,8 +83,8 @@ const Home: FunctionComponent = () => {
     const TransactionDummyData = [
         {
           id:1,
-          amount: "-86.00",
-          date: "14 Sep 2021",
+          amount: "-20.00",
+          date: "14 Jan 2023",
           title: "Taxi",
           subtitle: "Uber car",
           art: {
@@ -94,8 +94,8 @@ const Home: FunctionComponent = () => {
         },
         {
             id:1,
-            amount: "-86.00",
-            date: "14 Sep 2021",
+            amount: "-32.00",
+            date: "15 Feb 2023",
             title: "Taxi",
             subtitle: "Uber car",
             art: {
@@ -105,8 +105,8 @@ const Home: FunctionComponent = () => {
           },
           {
             id:1,
-            amount: "-86.00",
-            date: "14 Sep 2021",
+            amount: "-11.20",
+            date: "22 Feb 2023",
             title: "Taxi",
             subtitle: "Uber car",
             art: {
@@ -116,8 +116,52 @@ const Home: FunctionComponent = () => {
           },
           {
             id:1,
+            amount: "-21.03",
+            date: "23 Feb 2023",
+            title: "Shopping",
+            subtitle: "Uber car",
+            art: {
+              background: Colors.tertiary,
+              icon: "cart",
+            },
+          },
+          {
+            id:1,
+            amount: "-46.01",
+            date: "27 Feb 2023",
+            title: "Shopping",
+            subtitle: "Uber car",
+            art: {
+              background: Colors.tertiary,
+              icon: "cart",
+            },
+          },
+          {
+            id:1,
+            amount: "-112.12",
+            date: "01 Mar 2023",
+            title: "Flight ticket",
+            subtitle: "American Airlines",
+            art: {
+              background: Colors.accent,
+              icon: "airplane",
+            },
+          },
+          {
+            id:1,
+            amount: "-324.56",
+            date: "04 Mar 2023",
+            title: "Flight ticket",
+            subtitle: "Conviasa",
+            art: {
+              background: Colors.accent,
+              icon: "airplane",
+            },
+          },
+          {
+            id:1,
             amount: "-86.00",
-            date: "14 Sep 2021",
+            date: "09 Mar 2023",
             title: "Taxi",
             subtitle: "Uber car",
             art: {
@@ -127,57 +171,13 @@ const Home: FunctionComponent = () => {
           },
           {
             id:1,
-            amount: "-86.00",
-            date: "14 Sep 2021",
-            title: "Taxi",
-            subtitle: "Uber car",
+            amount: "-469.33",
+            date: "12 Mar 2023",
+            title: "Flight ticket",
+            subtitle: "American Airlines",
             art: {
-              background: Colors.primary,
-              icon: "car",
-            },
-          },
-          {
-            id:1,
-            amount: "-86.00",
-            date: "14 Sep 2021",
-            title: "Taxi",
-            subtitle: "Uber car",
-            art: {
-              background: Colors.primary,
-              icon: "car",
-            },
-          },
-          {
-            id:1,
-            amount: "-86.00",
-            date: "14 Sep 2021",
-            title: "Taxi",
-            subtitle: "Uber car",
-            art: {
-              background: Colors.primary,
-              icon: "car",
-            },
-          },
-          {
-            id:1,
-            amount: "-86.00",
-            date: "14 Sep 2021",
-            title: "Taxi",
-            subtitle: "Uber car",
-            art: {
-              background: Colors.primary,
-              icon: "car",
-            },
-          },
-          {
-            id:1,
-            amount: "-86.00",
-            date: "14 Sep 2021",
-            title: "Taxi",
-            subtitle: "Uber car",
-            art: {
-              background: Colors.primary,
-              icon: "car",
+              background: Colors.accent,
+              icon: "airplane",
             },
           }
     ]
