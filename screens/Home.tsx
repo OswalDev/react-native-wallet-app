@@ -3,6 +3,7 @@ import { StatusBar } from "expo-status-bar";
 import styled from "styled-components";
 import { Colors } from "../components/colors";
 import { Container } from "../components/shared";
+import TransactionSection from "../components/Transactions/TransactionSection";
 
 //card components
 import CardSection from "../components/Cards/CardSection";
@@ -79,10 +80,113 @@ const Home: FunctionComponent = () => {
         }
     ]
 
+    const TransactionDummyData = [
+        {
+          id:1,
+          amount: "-86.00",
+          date: "14 Sep 2021",
+          title: "Taxi",
+          subtitle: "Uber car",
+          art: {
+            background: Colors.primary,
+            icon: "car",
+          },
+        },
+        {
+            id:1,
+            amount: "-86.00",
+            date: "14 Sep 2021",
+            title: "Taxi",
+            subtitle: "Uber car",
+            art: {
+              background: Colors.primary,
+              icon: "car",
+            },
+          },
+          {
+            id:1,
+            amount: "-86.00",
+            date: "14 Sep 2021",
+            title: "Taxi",
+            subtitle: "Uber car",
+            art: {
+              background: Colors.primary,
+              icon: "car",
+            },
+          },
+          {
+            id:1,
+            amount: "-86.00",
+            date: "14 Sep 2021",
+            title: "Taxi",
+            subtitle: "Uber car",
+            art: {
+              background: Colors.primary,
+              icon: "car",
+            },
+          },
+          {
+            id:1,
+            amount: "-86.00",
+            date: "14 Sep 2021",
+            title: "Taxi",
+            subtitle: "Uber car",
+            art: {
+              background: Colors.primary,
+              icon: "car",
+            },
+          },
+          {
+            id:1,
+            amount: "-86.00",
+            date: "14 Sep 2021",
+            title: "Taxi",
+            subtitle: "Uber car",
+            art: {
+              background: Colors.primary,
+              icon: "car",
+            },
+          },
+          {
+            id:1,
+            amount: "-86.00",
+            date: "14 Sep 2021",
+            title: "Taxi",
+            subtitle: "Uber car",
+            art: {
+              background: Colors.primary,
+              icon: "car",
+            },
+          },
+          {
+            id:1,
+            amount: "-86.00",
+            date: "14 Sep 2021",
+            title: "Taxi",
+            subtitle: "Uber car",
+            art: {
+              background: Colors.primary,
+              icon: "car",
+            },
+          },
+          {
+            id:1,
+            amount: "-86.00",
+            date: "14 Sep 2021",
+            title: "Taxi",
+            subtitle: "Uber car",
+            art: {
+              background: Colors.primary,
+              icon: "car",
+            },
+          }
+    ]
+
     return (
         <HomeContainer>
             <StatusBar style="dark"/>
             <CardSection data={cardDummyData} />
+            <TransactionSection data={TransactionDummyData} />
         </HomeContainer>
     );
 }
