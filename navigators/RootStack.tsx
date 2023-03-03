@@ -1,20 +1,30 @@
 import  React, { FunctionComponent } from "react";
 
-//Screens
+//screens
 import Welcome from "../screens/Welcome";
 import Home from "../screens/Home";
+import Balance from "../screens/Balance";
+
+//custom components
 import { Colors } from "../components/colors";
 import Greeting from "../components/Header/Greeting";
 import Profile from "../components/Header/Profile";
 import Avi from "./../assets/avi/avatar.png";
 
-//React Navigation
+// balance screen props
+import { CardProps } from "../components/Cards/types";
+
+//balance back icon
+import { Ionicons } from "@expo/vector-icons";
+
+//react navigation
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 export type RootStackParams = {
     Welcome: undefined;
     Home: undefined;
+    Balance: CardProps;
 };
 
 const Stack = createStackNavigator<RootStackParams>();
@@ -45,7 +55,7 @@ const RootStack: FunctionComponent = () => {
                 />
             ),
         }}
-        initialRouteName="Home"
+        initialRouteName="Balance"
         >
             <Stack.Screen
             name="Welcome"
@@ -66,7 +76,25 @@ const RootStack: FunctionComponent = () => {
                 headerLeft: () => <></>
             }}
             />
-            
+            <Stack.Screen
+            name="Balance"
+            component={Balance}
+            options={({ route }) => ({
+                headerTitle: route?.params?.alias,
+                headerTitleAlign: "center",
+                headerBackImage: () => (
+                    <Ionicons
+                    name="chevron-back"
+                    size={25}
+                    color={Colors.secondary}
+                    />
+                ),
+                headerLeftContainerStyle:{
+                    paddingLeft: 0,
+
+                }
+            })}
+            />
         </Stack.Navigator>
     </NavigationContainer>
 }

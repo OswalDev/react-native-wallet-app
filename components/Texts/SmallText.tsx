@@ -1,8 +1,11 @@
 import React, {FunctionComponent} from 'react'
 import styled from "styled-components/native"
 
-//colors
+//custom components
 import { Colors } from "../colors";
+
+//types
+import { TextProps } from './types';
 
 const StyledText = styled.Text`
   font-size: 13px;
@@ -10,9 +13,6 @@ const StyledText = styled.Text`
   text-align: left;
   font-family: Lato-Regular;
 `;
-
-//types
-import { TextProps } from './types';
 
 const SmallText: FunctionComponent<TextProps> = (props) => {
   return <StyledText style={props.textStyles}>{props.children}</StyledText>

@@ -6,22 +6,16 @@ import SmallText from "../Texts/SmallText";
 import { View } from "react-native";
 
 //components
-import { ScreenWidth } from "../shared";
 import card_bg from "./../../assets/bgs/background_transparent.png"; 
 
 const CardBackground = styled.ImageBackground`
 height: 75%;
-width: ${ScreenWidth- 110}px;
+width: 100%;
 resize-mode: contain;
 background-color: ${Colors.accent};
 border-radius: 25px;
 margin-left: 25px;
 overflow: hidden;
-`;
-
-const CardTouchable = styled.TouchableHighlight`
-height: 100%;
-border-radius: 25px;
 `;
 
 const TouchableView = styled.View`
@@ -46,18 +40,16 @@ flex: 1;
 `;
 
 //types
-import { CardProps } from "./types";
+import { BalanceCardProps } from "./types";
 
-const CardItem: FunctionComponent<CardProps> = (props) => {
-    const handlePress = () => {};
-    
+const BalanceCard: FunctionComponent<BalanceCardProps> = (props) => {
+
     return (
         <CardBackground source={card_bg}>
-            <CardTouchable underlayColor={Colors.secondary} onPress={() => {}}>
                 <TouchableView>
                     <CardRow>
                         <RegularText textStyles={{ color: Colors.white }}>
-                        ****** {props.accountNo.slice(6,10)}
+                        ****** {props?.accountNo?.slice(6,10)}
                         </RegularText>
                     </CardRow>
                     <CardRow>
@@ -74,9 +66,8 @@ const CardItem: FunctionComponent<CardProps> = (props) => {
                         <Logo source={props.logo} />
                     </CardRow>
                 </TouchableView>
-            </CardTouchable>
         </CardBackground>
     );
 }
 
-export default CardItem;
+export default BalanceCard;

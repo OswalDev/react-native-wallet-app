@@ -2,6 +2,7 @@ import React, { FunctionComponent } from "react";
 import { StatusBar } from "expo-status-bar";
 import styled from 'styled-components/native';
 
+//custom components
 import { Container } from "../components/shared"
 import { Colors } from "../components/colors"
 import LargeText from "../components/Texts/LargeText"
@@ -9,7 +10,7 @@ import RegularText from "../components/Texts/RegularText"
 import SmallText from "../components/Texts/SmallText"
 import RegularButton from "../components/Buttons/RegularButton"
 
-//custom components
+
 const WelcomeContainer = styled(Container)`
 background-color: ${Colors.secondary};
 justify-content: space-between;

@@ -18,8 +18,8 @@ const ButtonView = styled.TouchableOpacity`
     padding: 20px;
     border-radius: 20px;
 `;
-//types
 
+//types
 interface ButtonProps {
     btnStyles?: StyleProp<ViewStyle>;
     onPress: ((event: GestureResponderEvent) => void) | undefined;

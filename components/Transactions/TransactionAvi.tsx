@@ -1,8 +1,7 @@
 import React, { FunctionComponent } from 'react'
-import styled from 'styled-components';
-
-//icons
-import {Ionicons} from "@expo/vector-icons";
+import styled from 'styled-components/native';
+import { View } from "react-native";
+import {Ionicons} from "@expo/vector-icons"; //icons
 
 //types
 import { TransactionAviProps } from './types'

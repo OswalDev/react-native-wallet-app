@@ -1,9 +1,15 @@
 import React, { FunctionComponent} from "react";
 import { StatusBar } from "expo-status-bar";
-import styled from "styled-components";
+import styled from 'styled-components/native';
 import { Colors } from "../components/colors";
 import { Container } from "../components/shared";
 import TransactionSection from "../components/Transactions/TransactionSection";
+import SendMoneySection from "../components/SendMoney/SendMoneySection";
+
+//assets
+import portrait1 from "../assets/portraits/1.jpg";
+import portrait2 from "../assets/portraits/2.jpg";
+import portrait3 from "../assets/portraits/3.jpg";
 
 //card components
 import CardSection from "../components/Cards/CardSection";
@@ -33,21 +39,21 @@ const Home: FunctionComponent = () => {
             id: 2,
             accountNo: "4362178122",
             balance: 23456.5,
-            alias: "Work Debit",
+            alias: "Personal Prepaid",
             logo: logoMasterCard,
         },
         {
             id: 3,
             accountNo: "9908392132",
             balance: 32566.0,
-            alias: "Work Debit",
+            alias: "Credit Card",
             logo: logoMasterCard,
         },
         {
             id: 4,
             accountNo: "9386738213",
             balance: 1122.2,
-            alias: "Work Debit",
+            alias: "Personal Prepaid",
             logo: logoMasterCard,
         },
         {
@@ -61,21 +67,21 @@ const Home: FunctionComponent = () => {
             id: 6,
             accountNo: "2565676997",
             balance: 6776.9,
-            alias: "Work Debit",
+            alias: "Personal Prepaid",
             logo: logoVisa,
         },
         {
             id: 7,
             accountNo: "2321799765",
             balance: 200000.5,
-            alias: "Work Debit",
+            alias: "Credit Card",
             logo: logoMasterCard,
         },
         {
             id: 8,
             accountNo: "123578876322",
             balance: 200000.5,
-            alias: "Work Debit",
+            alias: "Personal Prepaid",
             logo: logoVisa,
         }
     ]
@@ -93,7 +99,7 @@ const Home: FunctionComponent = () => {
           },
         },
         {
-            id:1,
+            id:2,
             amount: "-32.00",
             date: "15 Feb 2023",
             title: "Taxi",
@@ -104,7 +110,7 @@ const Home: FunctionComponent = () => {
             },
           },
           {
-            id:1,
+            id:3,
             amount: "-11.20",
             date: "22 Feb 2023",
             title: "Taxi",
@@ -115,7 +121,7 @@ const Home: FunctionComponent = () => {
             },
           },
           {
-            id:1,
+            id:4,
             amount: "-21.03",
             date: "23 Feb 2023",
             title: "Shopping",
@@ -126,7 +132,7 @@ const Home: FunctionComponent = () => {
             },
           },
           {
-            id:1,
+            id:5,
             amount: "-46.01",
             date: "27 Feb 2023",
             title: "Shopping",
@@ -137,7 +143,7 @@ const Home: FunctionComponent = () => {
             },
           },
           {
-            id:1,
+            id:6,
             amount: "-112.12",
             date: "01 Mar 2023",
             title: "Flight ticket",
@@ -148,7 +154,7 @@ const Home: FunctionComponent = () => {
             },
           },
           {
-            id:1,
+            id:7,
             amount: "-324.56",
             date: "04 Mar 2023",
             title: "Flight ticket",
@@ -159,7 +165,7 @@ const Home: FunctionComponent = () => {
             },
           },
           {
-            id:1,
+            id:8,
             amount: "-86.00",
             date: "09 Mar 2023",
             title: "Taxi",
@@ -170,7 +176,7 @@ const Home: FunctionComponent = () => {
             },
           },
           {
-            id:1,
+            id:9,
             amount: "-469.33",
             date: "12 Mar 2023",
             title: "Flight ticket",
@@ -182,11 +188,36 @@ const Home: FunctionComponent = () => {
           }
     ]
 
+    const SendMoneyDummyData = [
+      {
+        id: 1,
+        amount: "2450.02",
+        name: "Coby Andoh",
+        background: Colors.tertiary,
+        img: portrait1,
+      },
+      {
+        id: 2,
+        amount: "4550.32",
+        name: "Coby Andoh",
+        background: Colors.tertiary,
+        img: portrait2,
+      },
+      {
+        id: 3,
+        amount: "506.12",
+        name: "Coby Andoh",
+        background: Colors.tertiary,
+        img: portrait3,
+      },
+    ]
+
     return (
         <HomeContainer>
             <StatusBar style="dark"/>
             <CardSection data={cardDummyData} />
             <TransactionSection data={TransactionDummyData} />
+            <SendMoneySection data={SendMoneyDummyData} />
         </HomeContainer>
     );
 }
