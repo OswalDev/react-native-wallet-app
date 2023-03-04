@@ -10,6 +10,13 @@ import RegularText from "../components/Texts/RegularText"
 import SmallText from "../components/Texts/SmallText"
 import RegularButton from "../components/Buttons/RegularButton"
 
+//image
+import background from "../assets/bgs/background_v1.png"
+
+//types
+import { RootStackParamsList } from "../navigators/RootStack";
+import { StackScreenProps } from "@react-navigation/stack";
+type Props = StackScreenProps<RootStackParamsList, "Welcome">;
 
 const WelcomeContainer = styled(Container)`
 background-color: ${Colors.secondary};
@@ -36,10 +43,7 @@ flex: 1;
 justify-content: flex-end;
 `;
 
-//image
-import background from "../assets/bgs/background_v1.png"
-
-const Welcome:FunctionComponent = () => {
+const Welcome:FunctionComponent<Props> = ({ navigation }) => {
     return(
         <>
             <StatusBar style="light"/>
@@ -54,7 +58,7 @@ const Welcome:FunctionComponent = () => {
                     <SmallText textStyles={{ width: "70%", marginBottom: 25 }}>
                         Best payment method, connects your money to your friends and family.
                     </SmallText >
-                    <RegularButton onPress={() => {}}>
+                    <RegularButton onPress={() => { navigation.navigate("Home")} }>
                         Get Started
                     </RegularButton>
                 </BottomSection>

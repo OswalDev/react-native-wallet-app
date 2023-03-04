@@ -25,7 +25,13 @@ width: 100%;
 flex: 1;
 `
 
-const Home: FunctionComponent = () => {
+//types
+import { RootStackParamsList } from "../navigators/RootStack";
+import { StackScreenProps } from "@react-navigation/stack";
+export type Props = StackScreenProps<RootStackParamsList, "Home">;
+
+
+const Home: FunctionComponent<Props> = () => {
 
     const cardDummyData = [
         {

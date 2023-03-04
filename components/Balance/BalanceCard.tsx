@@ -14,7 +14,6 @@ width: 100%;
 resize-mode: contain;
 background-color: ${Colors.accent};
 border-radius: 25px;
-margin-left: 25px;
 overflow: hidden;
 `;
 
