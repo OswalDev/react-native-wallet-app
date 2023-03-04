@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "react-native-nft-marketplace",
-    "slug": "react-native-nft-marketplace",
+    "name": "react-native-wallet-app",
+    "slug": "react-native-wallet-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
